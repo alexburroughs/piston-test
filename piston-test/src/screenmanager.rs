@@ -1,21 +1,28 @@
 pub mod screenmanager {
 
     pub struct screenmanager {
-
+        current_screen : screen;
+        screens : Vec<screen>;
     }
 
     impl screenmanager {
         
-        fn init() {
+        fn init_screen() {
 
         }
         
-        fn render() {
-
+        fn render_screen() {
+            
         }
 
-        fn draw() {
+        fn update_screen() {
             
         }
     }
+}
+
+trait screen {
+    fn init(&mut self);
+    fn render(&mut self, args: &RenderArgs);
+    fn update(&mut self, args: &UpdateArgs);
 }
